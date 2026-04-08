@@ -1325,6 +1325,8 @@ input, textarea {
 /* ========================================
    RESPONSIVE
    ======================================== */
+
+/* Large tablets and small desktops */
 @media (max-width: 1024px) {
   .hero__container {
     grid-template-columns: 1fr;
@@ -1363,11 +1365,20 @@ input, textarea {
   .contact__grid {
     grid-template-columns: 1fr;
   }
+
+  .blog__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
   :root {
     --section-padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 1.25rem;
   }
 
   .nav__list {
@@ -1409,6 +1420,14 @@ input, textarea {
     font-size: 2.25rem;
   }
 
+  .hero__subtitle {
+    font-size: 1.05rem;
+  }
+
+  .hero__description {
+    font-size: 0.95rem;
+  }
+
   .hero__stats {
     gap: 1.5rem;
   }
@@ -1433,35 +1452,266 @@ input, textarea {
     grid-template-columns: 1fr;
   }
 
+  .about__heading {
+    font-size: 1.4rem;
+  }
+
+  .section__title {
+    font-size: 1.75rem;
+  }
+
+  .code-window__body {
+    font-size: 0.75rem;
+    padding: 1rem;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline__content {
+    padding: 1.25rem;
+  }
+
+  .timeline__title {
+    font-size: 1.05rem;
+  }
+
   .footer__container {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
   }
 
-  .timeline {
-    padding-left: 1.5rem;
+  .contact__card {
+    padding: 1rem;
+  }
+
+  .contact__socials {
+    justify-content: center;
   }
 }
 
+/* Large phones */
 @media (max-width: 480px) {
+  :root {
+    --section-padding: 3rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero {
+    padding-top: 4rem;
+    min-height: auto;
+    padding-bottom: 3rem;
+  }
+
+  .hero__title {
+    font-size: 1.75rem;
+    letter-spacing: -0.5px;
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero__badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.75rem;
+  }
+
   .hero__actions {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
   .hero__stats {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
   }
 
   .stat {
     text-align: center;
+    flex: 1;
+  }
+
+  .stat__number {
+    font-size: 1.35rem;
+  }
+
+  .stat__label {
+    font-size: 0.7rem;
+  }
+
+  .hero__visual {
+    max-width: 100%;
+  }
+
+  .code-window__body {
+    font-size: 0.7rem;
+    padding: 0.85rem;
+    line-height: 1.7;
+  }
+
+  .scroll-indicator {
+    display: none;
   }
 
   .btn {
     width: 100%;
     justify-content: center;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .section__title {
+    font-size: 1.5rem;
+  }
+
+  .section__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .section__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .about__image-wrapper {
+    max-width: 280px;
+  }
+
+  .about__experience-badge {
+    padding: 0.85rem;
+    bottom: -0.75rem;
+    right: -0.75rem;
+  }
+
+  .about__experience-number {
+    font-size: 1.5rem;
+  }
+
+  .about__heading {
+    font-size: 1.25rem;
+  }
+
+  .about__text {
+    font-size: 0.875rem;
+  }
+
+  .about__detail {
+    padding: 0.75rem;
+  }
+
+  .skills__category {
+    padding: 1.5rem;
+  }
+
+  .skill-tag {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .project-card__content {
+    padding: 1.25rem;
+  }
+
+  .project-card__title {
+    font-size: 1.05rem;
+  }
+
+  .project-card__description {
+    font-size: 0.8rem;
+  }
+
+  .timeline {
+    padding-left: 1.25rem;
+  }
+
+  .timeline__content {
+    padding: 1rem;
+  }
+
+  .timeline__title {
+    font-size: 1rem;
+  }
+
+  .timeline__description {
+    font-size: 0.8rem;
+  }
+
+  .blog-card__content {
+    padding: 1.25rem;
+  }
+
+  .blog-card__title {
+    font-size: 0.95rem;
+  }
+
+  .blog-card__excerpt {
+    font-size: 0.8rem;
+  }
+
+  .form__group input,
+  .form__group textarea {
+    padding: 0.85rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .form__group label {
+    left: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .contact__card-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact__social {
+    width: 42px;
+    height: 42px;
+  }
+
+  .footer__left p,
+  .footer__right p {
+    font-size: 0.75rem;
+  }
+
+  .nav__logo {
+    font-size: 1rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+  }
+
+  .hero__stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .code-window {
+    display: none;
+  }
+
+  .about__experience-badge {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 1rem;
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
   }
 }

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio2-sigma-ebon.vercel.app/sitemap.xml
